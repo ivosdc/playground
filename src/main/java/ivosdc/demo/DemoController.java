@@ -10,7 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/demo")
 @Api(tags = "Demo")
 public class DemoController {
-    DemoController() {
+    private final DemoService demoService;
+
+    DemoController(final DemoService demoService) {
+        this.demoService = demoService;
     }
 
     @GetMapping("/helloworld")
