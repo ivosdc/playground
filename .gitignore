@@ -1,0 +1,7 @@
+build
+out
+.gradle
+.idea
+src/main/resources/static/
+*.lock
+.DS_Store
