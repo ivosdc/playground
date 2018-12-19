@@ -104,14 +104,15 @@ uaTest.outputs.upToDateWhen { false }
 
 
 dependencies {
-    compile('org.springframework.boot:spring-boot-starter-web')
+    compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.springframework.boot:spring-boot-starter-hateoas'
     compile 'org.springframework.batch:spring-batch-core'
 
-    compile('mysql:mysql-connector-java')
-    compile('org.flywaydb:flyway-core')
+    compile 'mysql:mysql-connector-java'
+    compile 'org.flywaydb:flyway-core'
 
-    compile('org.projectlombok:lombok')
+    compile 'org.apache.commons:commons-lang3:3.8.1'
+    compile 'org.projectlombok:lombok'
 
     compile 'io.springfox:springfox-swagger2:2.9.2'
     compile 'io.springfox:springfox-swagger-ui:2.9.2'
@@ -126,4 +127,8 @@ dependencies {
     uaTestCompile 'org.fluentlenium:fluentlenium-assertj:3.7.1'
     uaTestCompile 'org.seleniumhq.selenium:selenium-chrome-driver:3.141.59'
     uaTestCompile 'org.seleniumhq.selenium:selenium-firefox-driver:3.141.59'
+}
+
+bootRun {
+    args = ['--spring.profiles.active=dev']
 }

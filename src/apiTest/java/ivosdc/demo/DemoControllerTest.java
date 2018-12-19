@@ -1,4 +1,4 @@
-package ivosdc;
+package ivosdc.demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

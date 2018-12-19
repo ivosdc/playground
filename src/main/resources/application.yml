@@ -1,0 +1,21 @@
+spring:
+  servlet:
+    multipart:
+      enabled: false
+      max-file-size: -1
+      max-request-size: -1
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  datasource:
+    url: ${vcap.services.database.credentials.jdbcUrl}
+    username: ${vcap.services.database.credentials.username}
+    password: ${vcap.services.database.credentials.password}
+    hikari:
+      maximum-pool-size: 10
+  batch:
+    job:
+      enabled: false
+  flyway:
+    out-of-order: true

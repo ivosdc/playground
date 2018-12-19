@@ -1,4 +1,4 @@
-package ivosdc;
+package ivosdc.demo;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

@@ -1,0 +1,9 @@
+vcap:
+  application:
+    application_uris: ["http://localhost:8080", "http://localhost:8080/api"]
+  services:
+    database:
+      credentials:
+        jdbcUrl: jdbc:mysql://localhost:3306/ivosdc
+        username: root
+        password: root
