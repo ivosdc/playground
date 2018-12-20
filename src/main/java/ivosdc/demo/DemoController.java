@@ -1,6 +1,5 @@
 package ivosdc.demo;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -27,7 +26,7 @@ public class DemoController {
 
     @GetMapping()
     @ApiOperation(value = "Gets all Demos.",
-    notes = "Returns a list of all Demos stored in the Database")
+        notes = "Returns a list of all Demos stored in the Database")
     public ResponseEntity<List<Demo>> getDemos() {
 
         return ResponseEntity.ok(demoService.getAll());

@@ -1,6 +1,5 @@
 package ivosdc.demo;
 
-import lombok.Getter;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,12 +10,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
-import java.util.Optional;
-
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -28,9 +23,6 @@ public class DemoControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
-
-    @Autowired
-    private DemoService demoService;
 
     @Autowired
     private DemoRepository demoRepository;
@@ -76,8 +68,8 @@ public class DemoControllerTest {
 
         mockMvc.perform(post("/api/demo")
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
-                .content("{\"description\" : \"description\"," +
-                         "\"name\" : \"name\"}"))
+                .content("{\"description\" : \"description\","
+                        + "\"name\" : \"name\"}"))
                 .andExpect(status().isOk());
     }
 }

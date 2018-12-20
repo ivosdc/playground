@@ -33,7 +33,9 @@ public class DemoService implements DemoProvider {
     public Demo create(String name, String description) {
         validateInput(name);
         demoRepository.findByName(name)
-                .ifPresent(demo -> { throw new DemoExistsException(name + " exists in database");});
+                .ifPresent(demo -> {
+                    throw new DemoExistsException(name + " exists in database");
+                });
         Demo demo = new Demo(name, description);
 
         return demoRepository.save(demo);
