@@ -29,3 +29,7 @@ The project follows the following steps (see commit-history):
 ## API-endpoints use database
 - creates DemoService, -Provider, -Repository and Model
 - POST and GET Demo-objects into and from database with API-calls
+
+## next steps: OIDC and OAuth2
+- enable OIDC based on github-Identity
+- secure App with OAuth2 tokenflow... 
