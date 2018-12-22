@@ -30,6 +30,10 @@ The project follows the following steps (see commit-history):
 - creates DemoService, -Provider, -Repository and Model
 - POST and GET Demo-objects into and from database with API-calls
 
-## next steps: OIDC and OAuth2
+# next steps:
+## create Angular Frontend
+- create an Angular Based Frontend with CRUD functionality on Demo-Object
+
+## OIDC and OAuth2
 - enable OIDC based on github-Identity
 - secure App with OAuth2 tokenflow... 
