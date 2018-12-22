@@ -62,14 +62,18 @@ public class DemoControllerTest {
 
     @Test
     public void createDemo_returnsDemoObject() throws Exception {
-        demoRepository.findByName("name").ifPresent(demo -> {
-            demoRepository.deleteById(demo.getId());
-        });
-
+        deleteIfExist();
         mockMvc.perform(post("/api/demo")
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
                 .content("{\"description\" : \"description\","
                         + "\"name\" : \"name\"}"))
                 .andExpect(status().isOk());
+        deleteIfExist();
+    }
+
+    private void deleteIfExist() {
+        demoRepository.findByName("name").ifPresent(demo -> {
+            demoRepository.deleteById(demo.getId());
+        });
     }
 }

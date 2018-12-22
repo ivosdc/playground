@@ -28,3 +28,4 @@ The project follows the following steps (see commit-history):
 
 ## API-endpoints use database
 - creates DemoService, -Provider, -Repository and Model
+- POST and GET Demo-objects into and from database with API-calls
